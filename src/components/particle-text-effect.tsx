@@ -437,7 +437,7 @@ export function ParticleTextEffect({
       <canvas
         ref={canvasRef}
         className="rounded-lg shadow-2xl"
-        style={{ maxWidth: "100%", height: "60vh", background: "transparent" }}
+        style={{ maxWidth: "100%", height: "60vh", background: "transparent"}}
       />
     </div>
   );

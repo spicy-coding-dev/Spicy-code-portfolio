@@ -59,7 +59,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white py-20 px-6 md:px-16">
+    <section className="md:min-h-screen h-auto bg-black text-white py-20 px-6 md:px-16">
       {/* Heading */}
       <div className="text-center mb-12">
         <motion.h2
