@@ -1,10 +1,6 @@
 // import React from "react";
 import { motion } from "framer-motion";
-// import TechStackGrid from "../TechStackGrid";
-// import ThreeCube from "../ThreeCube";
-// import CompanyTimeline from "../TechStackGrid";
 import { ParticleTextEffect } from "../particle-text-effect";
-
 
 export default function AboutSection() {
   return (
@@ -14,7 +10,7 @@ export default function AboutSection() {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8}}
+          transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             About <span className="text-indigo-500">Spicy Code</span>
@@ -30,12 +26,16 @@ export default function AboutSection() {
             technology to help brands grow and connect with people in meaningful
             ways.
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our <span className="text-indigo-500">Vision</span></h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Our <span className="text-indigo-500">Vision</span>
+          </h2>
           <p>
             To build a creative tech community that transforms businesses
             through innovation, design, and technology.
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4">Our <span className="text-indigo-500" >Mission</span></h2>
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4">
+            Our <span className="text-indigo-500">Mission</span>
+          </h2>
           <ul className="space-y-3 text-gray-300">
             <li className="flex items-center gap-3">
               <span className="text-indigo-500 text-xl">✔</span> Deliver
@@ -51,32 +51,18 @@ export default function AboutSection() {
               stunning.
             </li>
           </ul>
-        
         </motion.div>
 
         {/* Right side image mockup */}
         <motion.div
-          initial={{ opacity: 0, y:20 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="relative"
         >
           {/* <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur-3xl opacity-40"></div> */}
           <div className="relative bg-gradient-to-t from-black to-red-900 p-2 rounded-3xl shadow-lg shadow-indigo-500 border border-gray-700">
-            {/* <CompanyTimeline/> */}
-             <ParticleTextEffect />
-            {/* <ThreeCube/> */}
-
-            {/* <div className="mt-6 grid grid-cols-2 gap-3 text-center"> 
-              <div className="bg-gray-900 p-3 rounded-lg">
-                <p className="text-indigo-400 font-bold text-lg">5+</p>
-                <p className="text-gray-400 text-sm">Projects</p>
-              </div>
-              <div className="bg-gray-900 p-3 rounded-lg">
-                <p className="text-indigo-400 font-bold text-lg">5+</p>
-                <p className="text-gray-400 text-sm">Clients</p>
-              </div>
-            </div> */}
+            <ParticleTextEffect />
           </div>
         </motion.div>
       </div>

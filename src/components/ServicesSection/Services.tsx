@@ -26,7 +26,7 @@ const services = [
     title: "Mobile Application",
     description:
       "We develop high-quality mobile applications for Android and iOS using the latest frameworks. Our apps are designed to deliver smooth performance, sleek interfaces, and seamless user experiences.",
-    img: "/ServicesSectionImgs/mobile_application.jpg",
+    img: "/ServicesSectionImgs/mobile_application.jpeg",
   },
   {
     title: "Digital Marketing",
@@ -47,7 +47,6 @@ const services = [
     img: "/ServicesSectionImgs/video_editing.jpg",
   },
 ];
-
 
 export default function ServicesSection() {
   const [current, setCurrent] = useState(0);
@@ -77,7 +76,8 @@ export default function ServicesSection() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-slate-400 max-w-2xl mx-auto"
         >
-          Empowering your business with end-to-end digital solutions that drive results.
+          Empowering your business with end-to-end digital solutions that drive
+          results.
         </motion.p>
       </div>
 
@@ -103,68 +103,73 @@ export default function ServicesSection() {
             />
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-orange-800 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-              <h3 className="text-2xl font-semibold text-cyan-300 mb-2">{service.title}</h3>
+              <h3 className="text-2xl font-semibold text-cyan-300 mb-2">
+                {service.title}
+              </h3>
               <p className="text-sm text-slate-300">{service.description}</p>
             </div>
-            <h3 className="text-white text-lg font-semibold mt-3 text-center">{service.title}</h3>
+            <h3 className="text-white text-lg font-semibold mt-3 text-center">
+              {service.title}
+            </h3>
           </motion.div>
         ))}
       </div>
 
       {/* Mobile Carousel */}
-     <div className="sm:hidden relative flex flex-col items-center mt-6">
-  <div className="w-full overflow-hidden rounded-2xl shadow-lg border border-slate-700 relative">
-    <AnimatePresence initial={false} mode="wait">
-      <motion.div
-        key={current} // motion wrapper key
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -100 }}
-        transition={{ duration: 0.5 }}
-        className="relative w-full "
-      >
-        <img
-          src={services[current].img}
-          alt={services[current].title}
-          className="w-full h-72 object-cover rounded-2xl"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex flex-col justify-end p-6 rounded-2xl">
-          <h3 className="text-2xl font-semibold text-cyan-300 ml-10 mb-2">
-            {services[current].title}
-          </h3>
-          <p className="text-sm text-slate-300 ml-7">{services[current].description}</p>
+      <div className="sm:hidden relative flex flex-col items-center mt-6">
+        <div className="w-full overflow-hidden rounded-2xl shadow-lg border border-slate-700 relative">
+          <AnimatePresence initial={false} mode="wait">
+            <motion.div
+              key={current} // motion wrapper key
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className="relative w-full "
+            >
+              <img
+                src={services[current].img}
+                alt={services[current].title}
+                className="w-full h-72 object-cover rounded-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex flex-col justify-end p-6 rounded-2xl">
+                <h3 className="text-2xl font-semibold text-cyan-300 ml-10 mb-2">
+                  {services[current].title}
+                </h3>
+                <p className="text-sm text-slate-300 ml-7">
+                  {services[current].description}
+                </p>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
-      </motion.div>
-    </AnimatePresence>
-  </div>
 
-  {/* Arrows */}
-  <button
-    onClick={prevService}
-    className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full hover:bg-cyan-500/60 transition"
-  >
-    <ChevronLeft className="w-6 h-6" />
-  </button>
-  <button
-    onClick={nextService}
-    className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full hover:bg-cyan-500/60 transition"
-  >
-    <ChevronRight className="w-6 h-6" />
-  </button>
+        {/* Arrows */}
+        <button
+          onClick={prevService}
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full hover:bg-cyan-500/60 transition"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={nextService}
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 p-2 rounded-full hover:bg-cyan-500/60 transition"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
 
-  {/* Indicator Boxes */}
-  <div className="flex gap-2 mt-4">
-    {services.map((_, i) => (
-      <div
-        key={i}
-        className={`h-2 w-5 rounded-sm transition-all duration-300 ${
-          i === current ? "bg-cyan-400 w-8" : "bg-slate-600"
-        }`}
-      />
-    ))}
-  </div>
-</div>
-
+        {/* Indicator Boxes */}
+        <div className="flex gap-2 mt-4">
+          {services.map((_, i) => (
+            <div
+              key={i}
+              className={`h-2 w-5 rounded-sm transition-all duration-300 ${
+                i === current ? "bg-cyan-400 w-8" : "bg-slate-600"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

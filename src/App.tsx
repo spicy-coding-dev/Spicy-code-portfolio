@@ -30,10 +30,9 @@ const App: React.FC = () => {
       <section id="contact">
         <Contact />
       </section>
-    <section id="faq">
-
-          <FAQSection />
-    </section>
+      <section id="faq">
+        <FAQSection />
+      </section>
       <HoverFooter />
       <WhatsAppButton position="bottom-right" />
     </div>

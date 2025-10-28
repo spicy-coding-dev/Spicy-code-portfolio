@@ -180,6 +180,7 @@ function HoverFooter() {
               <a
                 key={label}
                 target="_black"
+                rel="noopener noreferrer"
                 href={href}
                 aria-label={label}
                 className="hover:text-[#3ca2fa] transition-colors text-white"

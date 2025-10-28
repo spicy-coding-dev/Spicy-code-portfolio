@@ -89,14 +89,16 @@ const NavBar: React.FC = () => {
           custom={links.length + 1}
         >
           <button className="bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600 transition-colors duration-300">
-            <a href="#contact"
-             onClick={(e) => {
-                  e.preventDefault();
-                  const section = document.querySelector(`#contact`);
-                  section?.scrollIntoView({ behavior: "smooth" });
-                }}
-            >Get Started</a>
-            
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                const section = document.querySelector(`#contact`);
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Get Started
+            </a>
           </button>
         </motion.div>
 
@@ -138,7 +140,17 @@ const NavBar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            Get Started
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                const section = document.querySelector(`#contact`);
+                section?.scrollIntoView({ behavior: "smooth" });
+                setMenuOpen(false);
+              }}
+            >
+              Get Started
+            </a>
           </motion.button>
         </motion.ul>
       )}

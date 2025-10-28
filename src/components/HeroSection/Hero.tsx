@@ -1,20 +1,10 @@
 // import { useState } from 'react'
-// import { Dialog, DialogPanel } from '@headlessui/react'
-// import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { motion } from "framer-motion";
 import { LampContainer } from "@/components/ui/lamp";
 import GlareHover from "../GlareHover";
-// import homepageimg from "../../assets/home_page_img.jpg"
 
-// const navigation:{name:string,href:string}[] = [
-//   { name: 'Product', href: '#' },
-//   { name: 'Features', href: '#' },
-//   { name: 'Marketplace', href: '#' },
-//   { name: 'Company', href: '#' },
-// ]
 
 export default function HeroSection() {
-  //   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
   return (
     <div>
       <LampContainer>
