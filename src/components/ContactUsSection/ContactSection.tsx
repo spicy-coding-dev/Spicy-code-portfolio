@@ -7,7 +7,7 @@ const Contact = () => {
       description="We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!"
       phone="+91 8438365490"
       email="enquiry.spicycode@gmail.com"
-      web={{ label: "shadcnblocks.com", url: "https://shadcnblocks.com" }}
+     
     />
   );
 };

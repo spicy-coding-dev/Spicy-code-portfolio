@@ -10,15 +10,13 @@ interface Contact2Props {
   description?: string;
   phone?: string;
   email?: string;
-  web?: { label: string; url: string };
 }
 
 export const Contact2 = ({
   title = "Contact Us",
   description = "We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!",
   phone = "+91 8438365490",
-  email = "enquiry.spicycode@gmail.com",
-  web = { label: "shadcnblocks.com", url: "https://shadcnblocks.com" },
+  email = "enquiry.spicycode@gmail.com"
 }: Contact2Props) => {
   const [result, setResult] = useState<string>("");
   const [loading, setLoading] = useState(false);
@@ -100,12 +98,6 @@ export const Contact2 = ({
                   <span className="font-bold">Email: </span>
                   <a href={`mailto:${email}`} className="underline">
                     {email}
-                  </a>
-                </li>
-                <li>
-                  <span className="font-bold ">Web: </span>
-                  <a href={web.url} target="_blank" className="underline">
-                    {web.label}
                   </a>
                 </li>
               </ul>
