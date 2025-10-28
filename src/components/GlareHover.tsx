@@ -1,5 +1,6 @@
 "use client";
-import React, { useRef, ReactNode, CSSProperties } from "react";
+import React, { useRef,  } from "react";
+import type {ReactNode, CSSProperties} from "react"
 
 interface GlareHoverProps {
   width?: string;
