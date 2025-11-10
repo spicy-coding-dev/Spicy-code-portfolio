@@ -93,7 +93,7 @@ export default function ServicesSection() {
               duration: 0.5,
               ease: "easeOut",
             }}
-            className="relative group overflow-hidden rounded-2xl shadow-lg border border-slate-700 hover:border-cyan-400 transition-all duration-300 cursor-pointer"
+            className="relative group overflow-hidden rounded-2xl shadow-2xl  border border-slate-700 hover:border-cyan-400 transition-all duration-300 cursor-pointer"
           >
             <img
               src={service.img}

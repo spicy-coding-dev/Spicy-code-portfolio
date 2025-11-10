@@ -2,7 +2,12 @@
 @import "tw-animate-css";
 @plugin "daisyui";
 
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Lemon&family=Outfit:wght@100..900&display=swap');
+
+
 @custom-variant dark (&:is(.dark *));
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -220,3 +225,13 @@
     @apply bg-background text-foreground;
   }
 }
+@font-face {
+  font-family: navBar;
+  src: url(/public/Fonts/LEMONMILK-Regular.otf);
+}
+nav,.mobile_menu{
+  font-family:navBar;
+  font-size: small;
+  font-weight: 200;
+}
+

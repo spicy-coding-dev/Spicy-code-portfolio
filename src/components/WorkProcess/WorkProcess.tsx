@@ -86,16 +86,16 @@ export default function WorkProcess() {
             key={index}
             className="
               relative flex flex-col cursor-pointer items-center text-center 
-              rounded-2xl p-6 w-full sm:w-[16rem]
+              rounded-2xl p-7 w-full sm:w-[16rem]
               transition-all duration-300
             "
             style={{
               border: `2px solid ${step.color}`,
-              boxShadow: `0 0 15px ${step.color}40`,
+              boxShadow: `0 0 15px ${step.color}`,
             }}
             whileHover={{
               scale: 1.05,
-              boxShadow: `0 0 25px ${step.color}`,
+              boxShadow: `0 0 35px ${step.color}`,
             }}
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}

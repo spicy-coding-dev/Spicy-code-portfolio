@@ -28,7 +28,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className={`fixed ${positionClass} z-50 flex md:h-12 md:w-12 h-13 w-13 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform duration-200 hover:scale-110 hover:shadow-xl`}
+      className={`fixed ${positionClass} z-50 flex md:h-13 md:w-13 h-11 w-11 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform duration-200 hover:scale-110 hover:shadow-xl`}
     >
       {/* ✅ Use your downloaded WhatsApp image instead of SVG */}
       <img

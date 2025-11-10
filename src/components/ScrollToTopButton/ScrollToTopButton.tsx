@@ -37,9 +37,9 @@ const ScrollToTopButton: React.FC = () => {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.5, y: 50 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="fixed bottom-25 right-5 z-50 flex h-13 w-13 md:h-12 md:w-12 items-center justify-center rounded-full bg-red-500 cursor-pointer text-white shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl"
+          className="fixed bottom-23 right-5 z-50 flex h-11 w-11 md:h-13 md:w-13 items-center justify-center rounded-full bg-red-500 cursor-pointer text-white shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl"
         >
-          <ArrowUp className="h-10 w-7 md:h-6 md:w-6" />
+          <ArrowUp className="h-8 w-7 md:h-6 md:w-6" />
         </motion.button>
       )}
     </AnimatePresence>

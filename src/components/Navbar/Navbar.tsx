@@ -36,12 +36,12 @@ const NavBar: React.FC = () => {
     <div className="fixed w-full z-50 top-0 left-0">
       <nav
         className={`flex justify-between items-center h-20 px-6 md:px-12 transition-all duration-300 ${
-          scrolled ? "bg-black/90 shadow-lg backdrop-blur-sm" : "bg-black"
+          scrolled ? "bg-black/90 shadow-lg backdrop-blur-3xl" : "bg-black"
         }`}
       >
         {/* Logo */}
         <motion.div
-          className="text-2xl font-bold text-orange-500 cursor-pointer"
+          className="text-2xl font-bold  text-orange-500 cursor-pointer"
           variants={itemVariants}
           initial="hidden"
           animate="visible"
@@ -52,7 +52,7 @@ const NavBar: React.FC = () => {
 
         {/* Desktop Links */}
         <motion.ul
-          className="hidden md:flex gap-10 text-white font-medium"
+          className="hidden md:flex gap-15 text-white font-medium"
           initial="hidden"
           animate="visible"
         >
@@ -88,7 +88,7 @@ const NavBar: React.FC = () => {
           animate="visible"
           custom={links.length + 1}
         >
-          <button className="bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600 transition-colors duration-300">
+          <button className="bg-orange-500 text-white px-5 py-2 rounded-md hover:bg-orange-600 transition-colors duration-300">
             <a
               href="#contact"
               onClick={(e) => {
@@ -127,7 +127,7 @@ const NavBar: React.FC = () => {
             >
               <a
                 href={link.href}
-                className="hover:text-orange-500 transition-colors duration-300"
+                className="hover:text-orange-500 transition-colors duration-300 mobile_menu"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.name}
