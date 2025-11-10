@@ -8,10 +8,13 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Left side content */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }} // start slightly below
-          whileInView={{ opacity: 1, y: 0 }} // move up to original position
-          transition={{ duration: 0.6, ease: "easeOut" }} // smooth easing
-          viewport={{ once: true }} // animate only once when in view
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.1,
+            duration: 0.5,
+            ease: "easeOut",
+          }}
           className="about_text"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
