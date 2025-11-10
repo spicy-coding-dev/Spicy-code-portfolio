@@ -104,7 +104,7 @@ const NavBar: React.FC = () => {
 
         {/* Mobile Hamburger */}
         <div className="md:hidden text-white">
-          <button onClick={() => setMenuOpen(!menuOpen)}>
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl">
             {menuOpen ? "✖" : "☰"}
           </button>
         </div>

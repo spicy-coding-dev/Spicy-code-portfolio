@@ -229,7 +229,7 @@
   font-family: navBar;
   src: url(/public/Fonts/LEMONMILK-Regular.otf);
 }
-nav,.mobile_menu{
+nav{
   font-family:navBar;
   font-size: small;
   font-weight: 200;
