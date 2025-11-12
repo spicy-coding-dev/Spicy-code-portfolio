@@ -128,7 +128,12 @@ const NavBar: React.FC = () => {
               <a
                 href={link.href}
                 className="hover:text-orange-500 transition-colors duration-300 mobile_menu"
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const section = document.querySelector(`${link.href}`);
+                  section?.scrollIntoView({ behavior: "smooth" });
+                  setMenuOpen(false)
+                }}
               >
                 {link.name}
               </a>

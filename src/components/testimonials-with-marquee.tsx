@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import type { TestimonialAuthor } from "@/components/ui/testimonial-card";
@@ -19,13 +20,11 @@ export function TestimonialsSection({
   testimonials,
   className,
 }: TestimonialsSectionProps) {
+  const [paused, setPaused] = useState(false);
+
   return (
     <section
-      className={cn(
-        "bg-black text-white",
-        "py-12 sm:py-5 md:py-10 px-0",
-        className
-      )}
+      className={cn("bg-black text-white", "py-12 sm:py-5 md:py-10 px-0", className)}
     >
       <div className="mx-auto flex max-w-container flex-col items-center gap-4 text-center sm:gap-16">
         <div className="flex flex-col items-center gap-4 px-4 sm:gap-8">
@@ -37,20 +36,35 @@ export function TestimonialsSection({
           </p>
         </div>
 
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-          <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row [--duration:25s]">
-            <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
+        {/* ✅ Responsive marquee */}
+        <div
+          className="relative flex w-full flex-col items-center justify-center overflow-hidden"
+          onTouchStart={() => setPaused(true)}   // mobile touch pause
+          onTouchEnd={() => setPaused(false)}    // release resume
+          onMouseEnter={() => setPaused(true)}   // desktop hover pause
+          onMouseLeave={() => setPaused(false)}  // unhover resume
+        >
+          <div
+            className={cn(
+              "flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row",
+              "[--duration:25s]"
+            )}
+          >
+            <div
+              className={cn(
+                "flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row",
+                paused && "[animation-play-state:paused]" // 👈 dynamic pause
+              )}
+            >
               {[...Array(5)].flatMap((_, outerIndex) =>
                 testimonials.map((testimonial, i) => (
-                  <TestimonialCard
-                    key={`${outerIndex}-${i}`}
-                    {...testimonial}
-                  />
+                  <TestimonialCard key={`${outerIndex}-${i}`} {...testimonial} />
                 ))
               )}
             </div>
           </div>
 
+          {/* gradient overlay */}
           <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/3 bg-gradient-to-r from-black to-transparent sm:block" />
           <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-black to-transparent sm:block" />
         </div>

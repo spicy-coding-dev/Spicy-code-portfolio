@@ -2,12 +2,7 @@
 @import "tw-animate-css";
 @plugin "daisyui";
 
-@import url('https://fonts.googleapis.com/css2?family=Inder&family=Lemon&family=Outfit:wght@100..900&display=swap');
-
-
 @custom-variant dark (&:is(.dark *));
-/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -234,4 +229,12 @@ nav{
   font-size: small;
   font-weight: 200;
 }
+body{
+  font-family: "Outfit";
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+
+}
+
 

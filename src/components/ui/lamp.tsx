@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +10,17 @@ export const LampContainer = ({
   children: React.ReactNode;
   className?: string;
 }) => {
+   const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkWidth = (): void => {
+      setIsMobile(window.innerWidth < 640); // Tailwind's sm breakpoint
+    };
+
+    checkWidth(); // Initial check
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
   return (
     <div
       className={cn(
@@ -64,14 +75,14 @@ export const LampContainer = ({
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl"
         ></motion.div>
         <motion.div
-          initial={{ width: "15rem" }}
-          whileInView={{ width: "30rem" }}
+           initial={{ width: isMobile ? "7rem" : "15rem" }}
+          whileInView={{ width: isMobile ? "15rem" : "30rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="absolute inset-auto z-50 h-0.5 w-[30px] -translate-y-[7rem] bg-cyan-400 "
+          className="absolute inset-auto z-50 h-1 w-[30px] -translate-y-[7rem] bg-cyan-400 "
         ></motion.div>
 
         <div className="absolute inset-auto z-40 h-44  w-full -translate-y-[12.5rem] bg-slate-950 "></div>

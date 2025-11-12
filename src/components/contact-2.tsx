@@ -116,7 +116,7 @@ export const Contact2 = ({
                   id="name"
                   name="name"
                   required
-                  placeholder="First Name"
+                  placeholder="Enter Your Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -129,7 +129,7 @@ export const Contact2 = ({
                 id="email"
                 name="email"
                 required
-                placeholder="Email"
+                placeholder="Enter Your Email"
                 value={emailVal}
                 onChange={(e) => setEmailVal(e.target.value)}
               />

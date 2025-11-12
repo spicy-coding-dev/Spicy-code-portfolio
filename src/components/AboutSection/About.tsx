@@ -4,8 +4,8 @@ import { ParticleTextEffect } from "../particle-text-effect";
 
 export default function AboutSection() {
   return (
-    <section className=" bg-gradient-to-b from-black to-red-900 text-white py-20  px-6 md:px-16 lg:px-28">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section className=" bg-gradient-to-b from-black to-red-900 text-white py-10  px-6 md:px-16 lg:px-28">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 mt-10 gap-16 items-center">
         {/* Left side content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
