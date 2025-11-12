@@ -91,7 +91,7 @@ function HoverFooter() {
                 alt="Spicy Code Logo"
                 className="w-20 h-20  rounded-4xl"
               />
-              <span className="text-white text-3xl font-bold">SPICY CODE</span>
+              <span className="text-white text-3xl font-bold">SPICY CODEZ</span>
             </div>
             <p className="text-sm text-white leading-relaxed">
               Driving Digital Transformation with Smart, Scalable IT Solutions.
@@ -191,14 +191,14 @@ function HoverFooter() {
 
           {/* Copyright */}
           <p className="text-center md:text-left text-white">
-            &copy; {new Date().getFullYear()} SpicyCode. All rights reserved.
+            &copy; {new Date().getFullYear()} SpicyCodeZ. All rights reserved.
           </p>
         </div>
       </div>
 
       {/* Text hover effect */}
       <div className="lg:flex hidden h-[30rem] -mt-40 -mb-36">
-        <TextHoverEffect text="Spicy Code" className="z-10" />
+        <TextHoverEffect text="Spicy CodeZ" className="z-10" />
       </div>
 
       <FooterBackgroundGradient />

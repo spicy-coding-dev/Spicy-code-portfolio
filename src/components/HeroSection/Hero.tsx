@@ -16,7 +16,7 @@ export default function HeroSection() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+          className="mt-5 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
         >
           Turning Ideas <br /> Into Powerful Digital Reality
         </motion.h1>
@@ -27,7 +27,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 1 }}
         >
-          Spicy Code is a modern web solutions company specializing in
+          Spicy CodeZ is a modern web solutions company specializing in
           high-performance websites, sleek designs, and cutting-edge web apps.
         </motion.p>
         <div className="mt-10 flex items-center justify-center gap-x-6">

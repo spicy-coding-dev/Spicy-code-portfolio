@@ -3,7 +3,7 @@ import { FAQ } from "../faq-tabs";
 const FAQSection = () => {
   const faqData = [
     {
-      question: " What services does Spicy Code provide?",
+      question: " What services does Spicy CodeZ provide?",
       answer:
         "Web development, App development, UI/UX design, Software development, Graphic Design,Video Editing and Digital consulting.",
     },

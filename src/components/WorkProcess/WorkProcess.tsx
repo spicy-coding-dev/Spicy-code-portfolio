@@ -66,7 +66,7 @@ export default function WorkProcess() {
         Our <span className="text-indigo-500"> Work Process</span>
       </h2>
       <p className="text-center text-gray-400 mb-16 text-sm sm:text-base">
-        Transforming Vision into Reality – Seamlessly with SPICY CODE.
+        Transforming Vision into Reality – Seamlessly with SPICY CODEZ.
       </p>
       {/* ✅ Responsive Grid Layout */}
       <div

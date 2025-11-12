@@ -47,7 +47,7 @@ const NavBar: React.FC = () => {
           animate="visible"
           custom={0}
         >
-          Spicy Code
+          Spicy CodeZ
         </motion.div>
 
         {/* Desktop Links */}
