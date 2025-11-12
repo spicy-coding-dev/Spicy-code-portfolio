@@ -76,7 +76,7 @@ export const LampContainer = ({
         ></motion.div>
         <motion.div
            initial={{ width: isMobile ? "7rem" : "15rem" }}
-          whileInView={{ width: isMobile ? "10rem" : "30rem" }}
+          whileInView={{ width: isMobile ? "20rem" : "30rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
