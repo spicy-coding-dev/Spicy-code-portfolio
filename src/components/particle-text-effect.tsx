@@ -167,7 +167,7 @@ interface ParticleTextEffectProps {
 const DEFAULT_WORDS = [
   "WELCOME",
   "TO",
-  "SPICY CODE",
+  "SPICY CODEZ",
   "5+",
   "PROJECTS",
   "5+",
@@ -226,7 +226,7 @@ export function ParticleTextEffect({
 
     // Draw text
     offscreenCtx.fillStyle = "white";
-    offscreenCtx.font = "bold 100px Arial";
+    offscreenCtx.font = "bold 130px Outer";
     offscreenCtx.textAlign = "center";
     offscreenCtx.textBaseline = "middle";
     offscreenCtx.fillText(word, canvas.width / 2, canvas.height / 2);

@@ -29,7 +29,7 @@ export const Contact2 = ({
   const services = [
     "Web Development",
     "Software Development",
-    "mobile Application",
+    "Mobile Application",
     "Digital Marketing",
     "UI / UX Design",
     "Graphic Design",
